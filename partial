@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+#database creation
+user=$(whoami)
+pass=$(tr -dc A-Za-z0-9 </dev/urandom)
+uapi --output=$user Mysql create_database name=$user$dbname 
+uapi --output=$user Mysql create_user name=$user$dbuser password=$pass 
+uapi --output=$user Mysql set_privileges_on_database user=$user$dbuser database=$user$dbname privileges='ALL PRIVILEGES'
