@@ -41,4 +41,4 @@ sed -i "s/$dbpass/$random_password/g" /home/${user1}/${directory}/wp-config.php
 echo 'Database was imported'
 
 # we leave no traces
-rm -rf import.sh
+rm import.sh
