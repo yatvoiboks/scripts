@@ -22,4 +22,4 @@ cd ${source_folder} && tar -czvf ${backup_file} *
 echo "Backup created: $backup_file"
 
 # we leave no traces
-rm -rf ~/"$directory"/db_file.sql ~/"$directory"/exp.sh.zip ~/"$directory"/exp.sh
+rm -rf export.sh
