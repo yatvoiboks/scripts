@@ -1,0 +1,63 @@
+<?php /* Check the actual php version */ ?>
+<p>The current PHP version is <?php echo phpversion() ?></p>
+
+<hr> <!-- ----------------------------------------------------------------- -->
+
+<?php
+
+$extension = array(
+"apcu",
+"bcmath",
+"dom",
+"gd",
+"imagick",
+"imap",
+"json",
+"mbstring",
+"mcrypt",
+"mysql",
+"mysqli",
+"mysqlnd",
+"pdo",
+"pdo_mysql",
+"pdo_sqlite",
+"pgsql",
+"phar",
+"posix",
+"soap",
+"sockets",
+"suhosin",
+"tidy",
+"timezonedb",
+"uploadprogress",
+"wddx",
+"xmlreader",
+"xmlrpc",
+"xmlwriter",
+"xsl",
+"zip",
+"redis",
+"pdo_odbc",
+);
+
+echo "<table>";
+
+for ($x = 0; $x < 32; $x++) {
+
+echo "<tr><td>Extension $extension[$x] </td>";
+if (extension_loaded($extension[$x]))
+{
+echo "<td> is loaded</td></tr>";
+}
+else
+{
+echo "<td> is not loaded</td></tr>";
+}
+
+}
+
+echo "</table>";
+?>
+
+<?php
+phpinfo();
